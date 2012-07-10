@@ -1,6 +1,7 @@
 require "defaultinator/version"
 
 class Module
+  # todo: figure out how to mix this in as a module slightly nicer
   alias_method :__original_attr_accessor, :attr_accessor
   def attr_accessor *args
     return send(:__original_attr_accessor, *args) unless args.last.is_a?(Hash)
