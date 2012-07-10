@@ -1,8 +1,5 @@
 require "defaultinator/version"
 
-module Defaultinator
-end
-
 class Module
   alias_method :__original_attr_accessor, :attr_accessor
   def attr_accessor *args
